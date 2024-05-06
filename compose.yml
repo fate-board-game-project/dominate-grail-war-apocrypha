@@ -1,0 +1,36 @@
+services:
+  backend:
+    container_name: backend
+    build:
+      context: ./backend/
+      dockerfile: Dockerfile
+    ports:
+      - 8080:8080
+    volumes:
+      - ./backend:/app
+    depends_on:
+      - db
+  frontend:
+    container_name: frontend
+    build:
+      context: ./frontend/
+      dockerfile: Dockerfile
+    volumes:
+      - ./frontend:/app/frontend
+    ports:
+      - 3000:3000
+    tty: true
+  db:
+    container_name: db
+    image: "postgres:16-alpine"
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=db
+    volumes:
+      - db-store:/var/lib/postgresql/data
+
+volumes:
+  db-store:
+
