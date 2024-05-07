@@ -12,8 +12,8 @@ docker compose up -d
 
 |app|port|
 |---|---|
-|front|[3000](http://localhost:3000)|
-|back|[8080](http://localhost:8080)|
+|[Next.js](/frontend/)|[3000](http://localhost:3000)|
+|[Gin](/backend/)|[8080](http://localhost:8080)|
 |db|[5432](http://localhost:5432)|
 
 
