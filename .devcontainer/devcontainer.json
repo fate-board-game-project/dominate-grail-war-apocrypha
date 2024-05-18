@@ -1,27 +1,30 @@
 {
   "name": "dominate-grail-war-apocrypha",
   "dockerComposeFile": [
-    "../docker-compose.yml"
+    "../compose.yml"
   ],
   "service": "frontend",
   "workspaceFolder": "/app/frontend",
   "customizations": {
     "vscode": {
       "extensions": [
-        "dsznajder.es7-react-js-snippets",
         "VisualStudioExptTeam.vscodeintellicode",
         "christian-kohler.path-intellisense",
-        "mhutchie.git-graph",
+        "wix.vscode-import-cost",
+        "biomejs.biome",
+        "streetsidesoftware.code-spell-checker",
+        "rodrigovallades.es7-react-js-snippets",
+        "ms-ceintl.vscode-language-pack-ja",
+        "xabikos.javascriptsnippets",
+        "pkief.material-icon-theme",
+        "mosapride.zenkaku",
         "formulahendry.auto-rename-tag",
-        "vscode-icons-team.vscode-icons",
-        "wix.vscode-import-cost"
+        "formulahendry.auto-close-tag",
       ],
       "settings": {
         "files.encoding": "utf8",
         "files.eol": "\n"
       }
     }
-  },
-  "forwardPorts": [3000],
-  "remoteUser": "node"
+  }
 }
