@@ -1,14 +1,14 @@
 import { Button } from "@/components/ui/button";
 
+export default async function Home() {
+	const _pong = await fetch(`${process.env.API_SERVER_ENDPOINT}/ping`);
+	// console.log(pong);
 
-export default function Home() {
 	return (
 		<main>
 			<h1>Dominate Grail War - Apocrypha</h1>
 
-			<Button>
-				クリック
-			</Button>
+			<Button>Login with Google</Button>
 		</main>
 	);
 }
