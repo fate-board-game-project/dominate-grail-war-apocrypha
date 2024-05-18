@@ -8,5 +8,5 @@ pre-commit:
     backend-format:
       root: "backend/"
       glob: "**/*.go"
-      run: go fmt {staged_files}
+      run: go fmt
       stage_fixed: true
