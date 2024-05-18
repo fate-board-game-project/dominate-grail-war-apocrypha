@@ -1,6 +1,12 @@
 pre-commit:
+  parallel: true
   commands:
-    format:
+    frontend-format:
       root: "frontend/"
       glob: "*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}"
       run: npx @biomejs/biome check --apply --no-errors-on-unmatched --files-ignore-unknown=true {staged_files} && git update-index --again
+    backend-format:
+      root: "backend/"
+      glob: "**/*.go"
+      run: go fmt {staged_files}
+      stage_fixed: true
